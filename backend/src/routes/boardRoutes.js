@@ -1,4 +1,5 @@
 import express from 'express';
+import { getBoard, getFilteredTask, getTaskCountsPerColumn } from '../controllers/boardController.js';
 
 const router = express.Router();
 
