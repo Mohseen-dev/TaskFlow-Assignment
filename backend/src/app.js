@@ -1,6 +1,7 @@
 import express from "express";
 import router from "./routes/boardRoutes.js";
 import taskRouter from "./routes/taskRoutes.js"
+import errorHandler from "./middleware/erroHandler.js";
 const app = express();
 
 app.use(express.json({ limit: "16kb" }));
@@ -9,5 +10,7 @@ app.use(express.urlencoded({ limit: "16kb", extended: true }));
 
 app.use("/api/boards",router);
 app.use("/api/tasks",taskRouter)
+
+app.use(errorHandler);
 
 export { app };

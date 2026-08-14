@@ -48,6 +48,14 @@ const createTask = (req, res, next) => {
       column_id,
     } = req.body;
 
+    if(!column_id || !priority){
+      return res.status(404).json({
+        error: " column_id or priority is required"
+      })
+    }
+
+    
+
     const allowedPriorities = ["Low", "Medium", "High"];
 
     if (!allowedPriorities.includes(priority)) {
@@ -106,9 +114,9 @@ const updateTask = (req, res, next) => {
 
     const { title, description, priority } = req.body;
 
-    if (!title || !title.trim()) {
+    if (!priority) {
       return res.status(400).json({
-        error: "Task title is required.",
+        error: "Task priority is required.",
       });
     }
 
@@ -248,6 +256,7 @@ const moveTask = (req, res, next) => {
 const getTask = (req, res, next) => {
   try {
     const taskId = Number(req.params.id);
+
 
     if (!Number.isInteger(taskId)) {
       return res.status(400).json({
