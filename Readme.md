@@ -33,7 +33,7 @@ JavaScript, Vite, Tailwind CSS, React Icons, Fetch API
 ### Folder Structure
 
 ```text
-TaskFlow/
+TaskFlow-Assignment/
 ├── frontend/
 │   ├── src/
 │   │   ├── components/
@@ -77,7 +77,7 @@ TaskFlow/
 # 1. Clone the repository
 
 git clone https://github.com/Mohseen-dev/TaskFlow-Assignment
-cd TaskFlow
+cd TaskFlow-Assignment
 
 # 2. Backend — to install, set up the database, and start the server
 
@@ -112,7 +112,6 @@ Base URL: `http://localhost:9000/api`
 | Method | Endpoint                  | Purpose                          |
 | ------ | -------------------------- | --------------------------------- |
 | GET    | `/boards/:id`              | Get board with columns and tasks |
-| GET    | `/boards/:id/task-counts`  | Get task count per column        |
 
 ### Task Endpoints
 
@@ -126,7 +125,9 @@ Base URL: `http://localhost:9000/api`
 | PATCH  | `/tasks/:id/move`        | Move task to another column  |
 | DELETE | `/tasks/:id`              | Delete a task                 |
 
-On the frontend, all API calls are centralized in `frontend/src/services/taskApi.js`. The board UI lives in `Board.jsx`, with task creation/editing handled by `TaskModal.jsx` and `EditTaskModal.jsx`.
+On the frontend, all API calls are centralized in `frontend/src/services/taskApi.js`. 
+
+The board UI lives in `Board.jsx`, with task creation/editing handled by `TaskModal.jsx` and `EditTaskModal.jsx`.
 
 ---
 
@@ -174,6 +175,8 @@ The development was mainly divided into:
 
 ---
 
-## Author
+## Author & Contact
 
-**Mohseen Khan**
+**Mohd Mohseen Khan**
+
+**Email : mohseenkhan908409@gmail.com**
