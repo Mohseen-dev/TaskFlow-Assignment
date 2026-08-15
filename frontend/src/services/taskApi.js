@@ -11,6 +11,15 @@ export const getBoard = async (boardId) => {
   return data;
 };
 
+export const taskCountPerColumn = async (boardId) => {
+  const response = await fetch(`${API_URL}/boards/${boardId}/countTask`);
+  const data = await response.json();
+  if (!response.ok) {
+    throw new Error(data.error || "Failed to load board");
+  }
+  return data;
+};
+
 export const createTask = async (taskData) => {
   const response = await fetch(`${API_URL}/tasks`, {
     method: "POST",
