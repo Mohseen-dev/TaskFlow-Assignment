@@ -84,7 +84,7 @@ cd TaskFlow-Assignment
 cd backend
 npm install
 npm run setup      # creates the SQLite DB and adds seed data
-npm run dev         # runs on http://localhost:9000
+npm run dev         # runs on https://taskflow-u5xn.onrender.com
 ```
 
 Open a **second terminal** for the frontend:
@@ -105,7 +105,7 @@ Both servers need to stay running.
 
 ## 3. API Overview
 
-Base URL: `http://localhost:9000/api`
+Base URL: `https://taskflow-u5xn.onrender.com`
 
 ### Board Endpoints
 

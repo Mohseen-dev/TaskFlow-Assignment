@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:9000/api";
+const API_URL = true ?"https://taskflow-u5xn.onrender.com":"http://localhost:9000/api";
 
 export const getBoard = async (boardId) => {
   const response = await fetch(`${API_URL}/boards/${boardId}`);
@@ -12,7 +12,7 @@ export const getBoard = async (boardId) => {
 };
 
 export const taskCountPerColumn = async (boardId) => {
-  const response = await fetch(`${API_URL}/boards/${boardId}/countTask`);
+  const response = await fetch(`${API_URL }/boards/${boardId}/countTask`);
   const data = await response.json();
   if (!response.ok) {
     throw new Error(data.error || "Failed to load board");
