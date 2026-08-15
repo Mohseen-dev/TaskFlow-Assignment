@@ -10,7 +10,7 @@ app.use(express.urlencoded({ limit: "16kb", extended: true }));
 // app.use(express.static("public")); for later use , if required
 
 app.use(cors({
-  origin: "http://localhost:5173"
+  origin: "https://taskflow-assignment-frontend-busx.onrender.com/"
 }));
 
 app.use("/api/boards",router);
