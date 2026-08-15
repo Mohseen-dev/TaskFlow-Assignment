@@ -32,57 +32,10 @@ const TaskModal = ({ columns, onClose, onTaskCreated }) => {
   };
 
   return (
-    // <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/90">
-    //   <div>
-    //     <h2 className="text-white ">Create Task</h2>
-    //     <form onSubmit={handleSubmit} className="bg-blue-400">
-    //       <input
-    //         type="text"
-    //         placeholder="Task title"
-    //         value={title}
-    //         onChange={(e) => setTitle(e.target.value)}
-    //       />
-
-    //       <textarea
-    //         placeholder="Description"
-    //         value={description}
-    //         onChange={(e) => setDescription(e.target.value)}
-    //       />
-
-    //       <select
-    //         value={priority}
-    //         onChange={(e) => setPriority(e.target.value)}
-    //       >
-    //         <option value="Low">Low</option>
-    //         <option value="Medium">Medium</option>
-    //         <option value="High">High</option>
-    //       </select>
-
-    //       <select
-    //         value={columnId}
-    //         onChange={(e) => setColumnId(e.target.value)}
-    //       >
-    //         {columns.map((column) => (
-    //           <option key={column.id} value={column.id}>
-    //             {column.name}
-    //           </option>
-    //         ))}
-    //       </select>
-
-    //       {error && <p>{error}</p>}
-
-    //       <button type="button" onClick={onClose} className="bg-red-700">
-    //         Cancel
-    //       </button>
-
-    //       <button type="submit">Create Task</button>
-    //     </form>
-    //   </div>
-    // </div>
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm">
-      <div className="w-full max-w-md rounded-md bg-white p-6 shadow-2xl border border-gray-400">
+      <div className="w-full max-w-md max-h-[90vh] overflow-y-auto rounded-md bg-white p-4 sm:p-6 shadow-2xl border border-gray-400">
         <div className="mb-6 flex items-center justify-between">
-          <h2 className="text-xl font-semibold tracking-tight text-black">
+          <h2 className="text-lg sm:text-xl font-semibold tracking-tight text-black">
             Create Task
           </h2>
           <button
@@ -130,7 +83,7 @@ const TaskModal = ({ columns, onClose, onTaskCreated }) => {
           </div>
 
           {/* Priority & Column Grid */}
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label className="mb-1 block text-sm font-medium text-black">
                 Priority
@@ -165,18 +118,18 @@ const TaskModal = ({ columns, onClose, onTaskCreated }) => {
           </div>
 
           {/* Actions */}
-          <div className="mt-2 flex items-center justify-end gap-3">
+          <div className="mt-2 flex flex-col-reverse sm:flex-row items-stretch sm:items-center justify-end gap-3">
             <button
               type="button"
               onClick={onClose}
-              className="rounded-md px-4 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-black hover:text-white"
+              className="w-full sm:w-auto rounded-md px-4 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-black hover:text-white"
             >
               Cancel
             </button>
 
             <button
               type="submit"
-              className="rounded-md bg-black px-4 py-2 text-sm font-medium text-white shadow-md transition-colors hover:bg-black/70 "
+              className="w-full sm:w-auto rounded-md bg-black px-4 py-2 text-sm font-medium text-white shadow-md transition-colors hover:bg-black/70 "
             >
               Create Task
             </button>
