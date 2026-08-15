@@ -1,8 +1,8 @@
 # TaskFlow
 
-A simple full-stack task management board (Kanban-style) built for the TaskFlow take-home assignment.
+A simple full-stack task management board (Trello-style) built for the TaskFlow take-home assignment.
 
-**Live Demo:** Not deployed yet
+**Live Demo:** https://taskflow-assignment-frontend-busx.onrender.com/
 
 **GitHub :** https://github.com/Mohseen-dev/TaskFlow-Assignment 
 
