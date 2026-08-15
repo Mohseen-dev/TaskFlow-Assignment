@@ -8,10 +8,13 @@ const app = express();
 app.use(express.json({ limit: "16kb" }));
 app.use(express.urlencoded({ limit: "16kb", extended: true }));
 // app.use(express.static("public")); for later use , if required
-
-app.use(cors({
-  origin: "https://taskflow-assignment-frontend-busx.onrender.com"
-}));
+const corsOptions = {
+  origin: [
+    "http://localhost:5173",
+    "https://taskflow-assignment-frontend-busx.onrender.com",
+  ],
+};
+app.use(cors(corsOptions));
 
 app.use("/api/boards",router);
 app.use("/api/tasks",taskRouter)
