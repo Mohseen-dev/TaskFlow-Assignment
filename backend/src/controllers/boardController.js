@@ -9,7 +9,7 @@ const getBoard = (req, res, next) => {
         error: "Board id must be a number.",
       });
     }
-    console.log("boardId : ", boardId);
+    // console.log("boardId : ", boardId);
     const board = db.prepare("SELECT * FROM boards WHERE id = ?").get(boardId);
 
     if (!board) {
